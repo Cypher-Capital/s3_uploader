@@ -108,7 +108,7 @@ async def main():
         backward_time = None
         yesterday = today
         logging.info("waiting for 1 days")
-        await asyncio.sleep(60)
+        await asyncio.sleep(86400)
         # Sleep for a day before checking again
         # You can adjust the sleep time as needed
         # For example, you might want to check for new files every hour
