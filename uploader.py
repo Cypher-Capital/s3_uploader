@@ -145,7 +145,7 @@ async def pricer_main():
             files = get_file_path()
             files = [f for f in files if f["timestamp"].date() <= yesterday.date() and f["file"] != "last_processed_date.txt" and f["file"].endswith(".bin")]
             if last_processed_date:
-                files = [f for f in files if f["timestamp"] >= last_processed_date]
+                files = [f for f in files if f["timestamp"] > last_processed_date]
             files = sorted(files, key=lambda x: x["timestamp"])
             print(f"Files to process: {files}")
             logging.info(f"Files to process: {files}")
